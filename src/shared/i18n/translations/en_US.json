@@ -1,0 +1,48 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "no_results": "No results found",
+    "back": "Back",
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "search": "Search"
+  },
+  "screens": {
+    "auth": {
+      "login": {
+        "title": "Sign In",
+        "description": "Enter your credentials to access your account",
+        "email": "Email",
+        "password": "Password",
+        "submit": "Sign In",
+        "submitting": "Signing in..."
+      }
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "welcome": "Welcome to React Base",
+      "subtitle": "A modern React starter template with TanStack Router, Query, and Chakra UI."
+    },
+    "posts": {
+      "title": "Posts",
+      "load_more": "Load more",
+      "loading_more": "Loading more...",
+      "no_more": "No more posts",
+      "views": "views",
+      "likes": "likes",
+      "dislikes": "dislikes"
+    },
+    "post_detail": {
+      "title": "Post",
+      "back": "Back to posts",
+      "tags": "Tags",
+      "reactions": "Reactions",
+      "views": "Views"
+    }
+  }
+}
