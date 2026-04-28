@@ -9,11 +9,11 @@
 
 | Fase | Descrição | Status |
 |------|-----------|--------|
-| 1 | Design System — tokens e variáveis | [ ] |
-| 2 | Setup shadcn/ui + Tailwind | [ ] |
-| 3 | Feature E2E de exemplo | [ ] |
-| 4 | CLAUDE.md files | [ ] |
-| 5 | README.md | [ ] |
+| 1 | Design System — tokens e variáveis | [x] |
+| 2 | Setup shadcn/ui + Tailwind | [x] |
+| 3 | Feature E2E de exemplo | [x] |
+| 4 | CLAUDE.md files | [x] |
+| 5 | README.md | [x] |
 
 ---
 
@@ -23,13 +23,13 @@ Criar a fundação de estilo do projeto: cores, tipografia, espaçamento e sombr
 
 ### Arquivos a criar
 
-- [ ] `src/styles/globals.css` — CSS variables para dark/light mode (cores como variáveis CSS)
-- [ ] `src/shared/design/tokens.ts` — paleta de cores, border-radius, z-index
-- [ ] `src/shared/design/typography.ts` — font family, sizes (xs → 4xl), weights, line-heights
-- [ ] `src/shared/design/spacing.ts` — escala base 4px (0.5, 1, 1.5, 2, 3, 4, 6, 8, 10, 12, 16, 20, 24)
-- [ ] `src/shared/design/shadows.ts` — elevações (sm, md, lg, xl)
-- [ ] `src/shared/design/breakpoints.ts` — sm(640), md(768), lg(1024), xl(1280), 2xl(1536)
-- [ ] `src/shared/design/index.ts` — barrel export de todos os tokens
+- [x] `src/styles/globals.css` — CSS variables para dark/light mode (cores como variáveis CSS)
+- [x] `src/shared/design/tokens.ts` — paleta de cores, border-radius, z-index
+- [x] `src/shared/design/typography.ts` — font family, sizes (xs → 4xl), weights, line-heights
+- [x] `src/shared/design/spacing.ts` — escala base 4px (0.5, 1, 1.5, 2, 3, 4, 6, 8, 10, 12, 16, 20, 24)
+- [x] `src/shared/design/shadows.ts` — elevações (sm, md, lg, xl)
+- [x] `src/shared/design/breakpoints.ts` — sm(640), md(768), lg(1024), xl(1280), 2xl(1536)
+- [x] `src/shared/design/index.ts` — barrel export de todos os tokens
 
 ### Regras do design system
 
@@ -46,12 +46,12 @@ Novos componentes e telas usam shadcn. Componentes legados Chakra ficam intactos
 
 ### Passos
 
-- [ ] Instalar Tailwind CSS v4 + configurar `tailwind.config.ts`
-- [ ] Configurar `components.json` do shadcn
-- [ ] Rodar `shadcn init` para setup inicial
-- [ ] Instalar componentes shadcn base: `button`, `card`, `input`, `label`, `badge`, `table`, `skeleton`, `dialog`, `drawer`, `select`, `checkbox`, `avatar`, `tooltip`, `sonner` (toast)
-- [ ] Mapear tokens do Design System (Fase 1) como CSS variables no `globals.css`
-- [ ] Validar que Chakra e shadcn coexistem sem conflito de estilos
+- [x] Instalar Tailwind CSS v4 + configurar `tailwind.config.ts`
+- [x] Configurar `components.json` do shadcn
+- [x] Rodar `shadcn init` para setup inicial
+- [x] Instalar componentes shadcn base: `button`, `card`, `input`, `label`, `badge`, `table`, `skeleton`, `dialog`, `drawer`, `select`, `checkbox`, `avatar`, `tooltip`, `sonner` (toast)
+- [x] Mapear tokens do Design System (Fase 1) como CSS variables no `globals.css`
+- [x] Validar que Chakra e shadcn coexistem sem conflito de estilos
 
 ### Convenção pós-setup
 
@@ -117,15 +117,15 @@ src/routes/_platform/users/
 
 ### Passos de implementação
 
-- [ ] Criar schemas Zod (`-users.schema.ts`)
-- [ ] Criar repository com HttpClient (`-users.repository.ts`)
-- [ ] Criar use cases (`-users.use-case.ts`)
-- [ ] Criar controller com TanStack Query (`-users.controller.ts`)
-- [ ] Criar componentes da tela (`_components/`)
-- [ ] Criar página principal (`index.tsx`)
-- [ ] Adicionar rota no sidebar
-- [ ] Adicionar traduções (EN + PT-BR)
-- [ ] Testar loading, erro e happy path
+- [x] Criar schemas Zod (`-users.schema.ts`)
+- [x] Criar repository com HttpClient (`-users.repository.ts`)
+- [x] Criar use cases (`-users.use-case.ts`)
+- [x] Criar controller com TanStack Query (`-users.controller.ts`)
+- [x] Criar componentes da tela (`_components/`)
+- [x] Criar página principal (`index.tsx`)
+- [x] Adicionar rota no sidebar
+- [x] Adicionar traduções (EN + PT-BR)
+- [x] Testar loading, erro e happy path
 
 ---
 
@@ -135,11 +135,11 @@ Documentação para orientar a IA em qualquer tarefa no projeto.
 
 ### Arquivos a criar
 
-- [ ] `/CLAUDE.md` — visão geral do projeto, stack, convenções globais, regras absolutas
-- [ ] `/src/routes/CLAUDE.md` — como criar rotas, telas, layouts, loaders
-- [ ] `/src/routes/_platform/users/CLAUDE.md` — feature E2E como referência canônica
-- [ ] `/src/shared/CLAUDE.md` — HttpClient, Result monad, i18n, utilitários
-- [ ] `/src/shared/design/CLAUDE.md` — tokens, shadcn, CVA, dark mode
+- [x] `/CLAUDE.md` — visão geral do projeto, stack, convenções globais, regras absolutas
+- [x] `/src/routes/CLAUDE.md` — como criar rotas, telas, layouts, loaders
+- [x] `/src/routes/_platform/users/CLAUDE.md` — feature E2E como referência canônica
+- [x] `/src/shared/CLAUDE.md` — HttpClient, Result monad, i18n, utilitários
+- [x] `/src/shared/design/CLAUDE.md` — tokens, shadcn, CVA, dark mode
 
 ### Conteúdo de cada arquivo
 
@@ -192,16 +192,16 @@ Documentação para orientar a IA em qualquer tarefa no projeto.
 
 ## Fase 5 — README.md
 
-- [ ] Badges (tech stack)
-- [ ] O que é o projeto
-- [ ] Stack e versões
-- [ ] Pré-requisitos
-- [ ] Como rodar localmente
-- [ ] Estrutura de pastas (árvore comentada)
-- [ ] Guia rápido: como adicionar uma feature nova (referência à feature users)
-- [ ] Design system: tokens, shadcn, dark mode
-- [ ] Convenções de código
-- [ ] Contribuição
+- [x] Badges (tech stack)
+- [x] O que é o projeto
+- [x] Stack e versões
+- [x] Pré-requisitos
+- [x] Como rodar localmente
+- [x] Estrutura de pastas (árvore comentada)
+- [x] Guia rápido: como adicionar uma feature nova (referência à feature users)
+- [x] Design system: tokens, shadcn, dark mode
+- [x] Convenções de código
+- [x] Contribuição
 
 ---
 
@@ -218,4 +218,4 @@ Documentação para orientar a IA em qualquer tarefa no projeto.
 
 ## Próximo passo
 
-👉 **Fase 1 — Design System**: criar os tokens de cor, tipografia e espaçamento.
+✅ **Plano concluído!** Todos os itens foram implementados.
