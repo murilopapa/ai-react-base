@@ -10,6 +10,7 @@ import { HTTP } from '@/shared/http/axios.http';
 import { routeTree } from './routeTree.gen';
 
 import '@/shared/i18n/config';
+import '@/styles/globals.css';
 
 const queryClient = new QueryClient();
 
