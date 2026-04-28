@@ -16,6 +16,11 @@ const config = defineConfig({
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       },
+      '/placeholder': {
+        target: 'https://jsonplaceholder.typicode.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/placeholder/, ''),
+      },
     },
   },
 });
