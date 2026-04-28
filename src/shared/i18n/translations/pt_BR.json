@@ -43,6 +43,10 @@
       "tags": "Tags",
       "reactions": "Reações",
       "views": "Visualizações"
+    },
+    "users": {
+      "title": "Usuários",
+      "count": "usuários"
     }
   }
 }

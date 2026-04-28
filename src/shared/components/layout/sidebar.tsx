@@ -1,7 +1,7 @@
 import { Box, Flex, Text, VStack } from '@chakra-ui/react';
 import { Link, useRouterState } from '@tanstack/react-router';
 import type { IconType } from 'react-icons';
-import { LuCircleHelp, LuFileText, LuLayoutDashboard, LuSettings } from 'react-icons/lu';
+import { LuCircleHelp, LuFileText, LuLayoutDashboard, LuSettings, LuUsers } from 'react-icons/lu';
 
 import { iconSizes } from '@/shared/theme/theme';
 
@@ -14,6 +14,7 @@ type NavItem = {
 const NAV_ITEMS: NavItem[] = [
   { label: 'Dashboard', to: '/', icon: LuLayoutDashboard },
   { label: 'Posts', to: '/posts', icon: LuFileText },
+  { label: 'Users', to: '/users', icon: LuUsers },
 ];
 
 const SYSTEM_ITEMS: NavItem[] = [
