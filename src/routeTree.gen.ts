@@ -13,6 +13,7 @@ import { Route as AuthRouteRouteImport } from './routes/auth/route'
 import { Route as PlatformRouteRouteImport } from './routes/_platform/route'
 import { Route as AuthIndexRouteImport } from './routes/auth/index'
 import { Route as PlatformIndexRouteImport } from './routes/_platform/index'
+import { Route as PlatformUsersIndexRouteImport } from './routes/_platform/users/index'
 import { Route as PlatformPostsIndexRouteImport } from './routes/_platform/posts/index'
 import { Route as PlatformPostsPostIdIndexRouteImport } from './routes/_platform/posts/$postId/index'
 
@@ -35,6 +36,11 @@ const PlatformIndexRoute = PlatformIndexRouteImport.update({
   path: '/',
   getParentRoute: () => PlatformRouteRoute,
 } as any)
+const PlatformUsersIndexRoute = PlatformUsersIndexRouteImport.update({
+  id: '/users/',
+  path: '/users/',
+  getParentRoute: () => PlatformRouteRoute,
+} as any)
 const PlatformPostsIndexRoute = PlatformPostsIndexRouteImport.update({
   id: '/posts/',
   path: '/posts/',
@@ -52,12 +58,14 @@ export interface FileRoutesByFullPath {
   '/auth': typeof AuthRouteRouteWithChildren
   '/auth/': typeof AuthIndexRoute
   '/posts/': typeof PlatformPostsIndexRoute
+  '/users/': typeof PlatformUsersIndexRoute
   '/posts/$postId/': typeof PlatformPostsPostIdIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof PlatformIndexRoute
   '/auth': typeof AuthIndexRoute
   '/posts': typeof PlatformPostsIndexRoute
+  '/users': typeof PlatformUsersIndexRoute
   '/posts/$postId': typeof PlatformPostsPostIdIndexRoute
 }
 export interface FileRoutesById {
@@ -67,13 +75,20 @@ export interface FileRoutesById {
   '/_platform/': typeof PlatformIndexRoute
   '/auth/': typeof AuthIndexRoute
   '/_platform/posts/': typeof PlatformPostsIndexRoute
+  '/_platform/users/': typeof PlatformUsersIndexRoute
   '/_platform/posts/$postId/': typeof PlatformPostsPostIdIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/auth' | '/auth/' | '/posts/' | '/posts/$postId/'
+  fullPaths:
+    | '/'
+    | '/auth'
+    | '/auth/'
+    | '/posts/'
+    | '/users/'
+    | '/posts/$postId/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/auth' | '/posts' | '/posts/$postId'
+  to: '/' | '/auth' | '/posts' | '/users' | '/posts/$postId'
   id:
     | '__root__'
     | '/_platform'
@@ -81,6 +96,7 @@ export interface FileRouteTypes {
     | '/_platform/'
     | '/auth/'
     | '/_platform/posts/'
+    | '/_platform/users/'
     | '/_platform/posts/$postId/'
   fileRoutesById: FileRoutesById
 }
@@ -119,6 +135,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PlatformIndexRouteImport
       parentRoute: typeof PlatformRouteRoute
     }
+    '/_platform/users/': {
+      id: '/_platform/users/'
+      path: '/users'
+      fullPath: '/users/'
+      preLoaderRoute: typeof PlatformUsersIndexRouteImport
+      parentRoute: typeof PlatformRouteRoute
+    }
     '/_platform/posts/': {
       id: '/_platform/posts/'
       path: '/posts'
@@ -139,12 +162,14 @@ declare module '@tanstack/react-router' {
 interface PlatformRouteRouteChildren {
   PlatformIndexRoute: typeof PlatformIndexRoute
   PlatformPostsIndexRoute: typeof PlatformPostsIndexRoute
+  PlatformUsersIndexRoute: typeof PlatformUsersIndexRoute
   PlatformPostsPostIdIndexRoute: typeof PlatformPostsPostIdIndexRoute
 }
 
 const PlatformRouteRouteChildren: PlatformRouteRouteChildren = {
   PlatformIndexRoute: PlatformIndexRoute,
   PlatformPostsIndexRoute: PlatformPostsIndexRoute,
+  PlatformUsersIndexRoute: PlatformUsersIndexRoute,
   PlatformPostsPostIdIndexRoute: PlatformPostsPostIdIndexRoute,
 }
 
